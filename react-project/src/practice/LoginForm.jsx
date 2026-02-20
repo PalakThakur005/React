@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 const LoginForm = () => {
   const [formData, setformData] = useState({
     email: "",
@@ -24,9 +25,10 @@ const LoginForm = () => {
           <div className="content-login">
             <h1>Login Form</h1>
             <form  onSubmit={handleSubmit} >
-              <label className="label-login">Email ID</label>
+              
               <br></br>
-                 <input
+                 <Inputfield
+                 label="Emain Id:"
               onChange={handleChange}
               name='email'
               value={formData.email}
@@ -36,11 +38,12 @@ const LoginForm = () => {
               required
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               title="Enter a valid email address"
-            ></input>
+            />
               <br></br>
-              <label className="label-login">Password</label>
+              
               <br></br>
-              <input
+               <Inputfield
+                 label="Password:"
                 onChange={handleChange}
                 name="password"
                 value={formData.password}
@@ -51,11 +54,12 @@ const LoginForm = () => {
                 minLength="6"
                 maxLength="20"
                 title="Password must be between 6 to 20 characters"
-              ></input>
+              />
               <br></br>
-            <button className="btn-login" type="submit">
+            <button className="btn1" type="submit">
               Submit
             </button>
+            
              </form>
           </div>
         </div>

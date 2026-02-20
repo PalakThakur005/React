@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Inputfield({label, onChange, type, name, value, min, max, title, placeholder}) {
+function Inputfield({label,required, onChange, type, name, minLength, value,maxLength, min,pattern, max, title, placeholder}) {
   return (
     <div>
       <label className='label-login'>{label}</label>
@@ -13,6 +13,10 @@ function Inputfield({label, onChange, type, name, value, min, max, title, placeh
          max={max}
          title={title} 
          placeholder={placeholder}
+         minLength={minLength}
+          maxLength={maxLength}
+         pattern={pattern}
+         required={required}
 
       />
     </div>
